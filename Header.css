@@ -1,0 +1,88 @@
+/* ==== Base Header Style ==== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ==== Logo ==== */
+  .logo-nav a {
+    font-size: 24px;
+    color: rgb(20, 19, 18);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .logo-nav a:hover {
+    color: wheat;
+    transition: color 0.3s ease;
+  }
+  
+  /* ==== Navigation Links ==== */
+  .nav-options {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .option a {
+    color: rgb(22, 22, 22);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .option a:hover {
+    color: wheat;
+  }
+  
+  /* ==== Mobile Menu Icon ==== */
+  .menu-icon {
+    display: none;
+    font-size: 26px;
+    color: rgb(10, 8, 8);
+    background-color: rgba(246, 233, 202, 0.6);
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* ==== Responsive Styles ==== */
+  @media (max-width: 768px) {
+    .nav-options {
+      position: absolute;
+      top: 70px;
+      left: -100%;
+      width: 100%;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px 0;
+      align-items: center;
+      transition: left 0.3s ease;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  
+    .nav-options.active {
+      left: 0;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+  

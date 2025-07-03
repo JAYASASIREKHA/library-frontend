@@ -1,0 +1,56 @@
+.reservedbooks-container{
+    background: linear-gradient(135deg, #7f7cc0 0%, #986778 100%); /* Light pastel purple and pink gradient */
+    padding: 40px 20px; /* Adjusted padding */
+    padding-top: 100px; /* Increased top padding to move content down */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+.reservedbooks-title{
+    color: #4a4a4a; /* Softer dark grey for title */
+    text-align: center;
+    font-size: 36px; /* Slightly larger title */
+    margin-bottom: 30px; /* Space below the title */
+    font-weight: 700; /* Bolder title */
+}
+
+.reservedbooks-table {
+    font-family: 'Inter', sans-serif; /* Use the consistent font */
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px; /* Slightly reduced max-width for better readability on large screens */
+    margin: 20px auto; /* Center the table and add top/bottom margin */
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures rounded corners are applied */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer shadow for the table */
+}
+
+.reservedbooks-table th {
+    background-color: #74dba7; /* Light pastel purple for header */
+    color: #4a148c; /* Darker purple text for header */
+    font-weight: 600; /* Semi-bold header text */
+    text-align: left;
+    padding: 12px 15px; /* Increased padding */
+    border: none; /* Remove default border */
+}
+
+.reservedbooks-table td {
+    border: 1px solid #6bd580; /* Softer border for cells */
+    text-align: left;
+    padding: 12px 15px; /* Increased padding */
+    background-color: #ffffff; /* White background for data rows */
+    color: #333; /* Darker text for readability */
+}
+
+/* Alternating row colors */
+.reservedbooks-table tbody tr:nth-child(even) td {
+    background-color: #f3e5f5; /* Lighter pastel purple for even rows */
+}
+
+/* Hover effect on rows */
+.reservedbooks-table tbody tr:hover {
+    background-color: #e1bee7; /* Matching the start color of the background gradient on hover */
+    cursor: pointer; /* Indicate interactivity */
+}

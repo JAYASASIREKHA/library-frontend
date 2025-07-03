@@ -1,0 +1,121 @@
+.recentaddedbooks-container {
+    background: linear-gradient(45deg, rgb(242, 209, 246), rgb(181, 239, 170), rgb(172, 244, 241), rgb(248, 246, 246)); /* Initial gradient */
+    background-size: 400% 400%; /* Controls the size of the gradient */
+    animation: gradientMove 10s ease infinite; /* Animating the gradient */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding: 90px 20px 20px; /* Top padding added to push content below header */
+    min-height: 100vh; /* Ensures the container has enough height to be scrollable */
+    overflow-y: auto; /* Allows vertical scrolling if needed */
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.recentbooks-title {
+    color: rgb(238, 129, 30); /* Title color */
+    font-size: 32px;
+    text-align: center;
+    margin-top: 20px; /* Added space above title */
+    margin-bottom: 20px; /* Space between title and books */
+    z-index: 10; /* Ensure title stays on top */
+    position: relative; /* To work with z-index */
+    width: 100%;
+}
+
+.recentbooks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+    gap: 20px; /* Space between each book container */
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.recent-book {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 10px; /* Padding inside the book container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 320px; /* Height for the book container */
+    width: 300px; /* Adjusted width of the book container */
+}
+
+.recent-book:hover {
+    transform: scale(1.05);
+}
+
+.book-image {
+    width: 100%; /* Make image fill its container */
+    height: 250px; /* Adjusted height of the image */
+    object-fit: contain; /* Ensures the full image is visible without cropping */
+    border-radius: 8px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.buy-btn, .add-to-cart-btn {
+    background-color: rgb(238, 129, 30);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover, .add-to-cart-btn:hover {
+    background-color: rgb(200, 100, 30);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .recentbooks {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns per row on smaller screens */
+        gap: 15px; /* Slightly larger gap for mobile screens */
+    }
+
+    .recent-book {
+        width: 230px; /* Adjust book container size */
+        height: 300px; /* Adjust height for mobile screens */
+    }
+
+    .book-image {
+        height: 200px; /* Adjust image height for mobile screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .recentbooks {
+        grid-template-columns: 1fr; /* 1 column per row on mobile */
+        gap: 20px; /* Increase gap for mobile screens */
+    }
+
+    .recent-book {
+        width: 250px; /* Adjust book container size */
+        height: 320px; /* Adjust height for mobile screens */
+    }
+
+    .book-image {
+        height: 220px; /* Adjust image height for mobile screens */
+    }
+}

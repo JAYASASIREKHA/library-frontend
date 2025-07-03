@@ -1,0 +1,83 @@
+.book-detail-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  padding-top: 100px; /* Adjust this value based on your header's height */
+}
+
+.book-detail-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.book-cover {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.book-info-section {
+  flex: 1;
+  max-width: 600px;
+}
+
+.book-info-section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.book-info-section p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.payment-methods button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+
+.payment-methods button:hover {
+  background-color: darkgreen;
+}
+
+/* Additional Mobile Responsiveness */
+@media (max-width: 768px) {
+  .book-detail-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Reduced gap between image and info */
+  }
+
+  .book-cover {
+    width: 250px; /* Adjust image size for smaller screens */
+    height: 350px;
+  }
+
+  .book-info-section {
+    max-width: 100%;
+  }
+
+  .payment-methods {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 15px; /* Larger gap between buttons */
+  }
+
+  .payment-methods button {
+    width: 100%; /* Full width for buttons on small screens */
+  }
+}
